@@ -1,4 +1,4 @@
-package com.hamon.kosmos_challenge
+package com.hamon.kosmos_challenge.ui.screens
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.hamon.kosmos_challenge.navigation.NavigationComposable
 import com.hamon.kosmos_challenge.ui.theme.Kosmos_ChallengeTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    NavigationComposable()
                 }
             }
         }
