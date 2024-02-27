@@ -75,6 +75,15 @@ dependencies {
     // ViewModel Compose
     implementation(libs.viewmodel.compose)
 
+    // Coil
+    implementation(libs.coil)
+
+    // Lottie
+    implementation(libs.lottie)
+
+    // Lifecycle compose
+    implementation(libs.compose.lifecycle)
+
     // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
