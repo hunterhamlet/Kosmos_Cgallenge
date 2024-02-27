@@ -84,6 +84,11 @@ dependencies {
     // Lifecycle compose
     implementation(libs.compose.lifecycle)
 
+    // DI
+    implementation("io.insert-koin:koin-core:3.5.3")
+    implementation("io.insert-koin:koin-android:3.5.3")
+    implementation("io.insert-koin:koin-androidx-compose:3.5.3")
+
     // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

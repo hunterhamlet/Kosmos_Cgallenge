@@ -11,12 +11,7 @@ interface GetCharactersUseCase {
     suspend operator fun invoke(): ServiceResponse<MutableList<CharacterDomain>>
 }
 
-class GetCharacterUserCaseImpl : GetCharactersUseCase {
-
-    // Create repository
-    private val repository: RickAndMortyRepository by lazy {
-        RickAndMortyRepositoryImpl()
-    }
+class GetCharacterUserCaseImpl(val repository: RickAndMortyRepository) : GetCharactersUseCase {
 
     override suspend operator fun invoke(): ServiceResponse<MutableList<CharacterDomain>> {
         return if (repository.getCharacters().isNotEmpty()) {

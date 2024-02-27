@@ -12,9 +12,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.hamon.kosmos_challenge.ui.components.CharacterCardComponent
 import com.hamon.kosmos_challenge.ui.view_models.ListMainViewModel
+import org.koin.androidx.compose.koinViewModel
 
 @Composable
-fun ListMainScreen(viewModel: ListMainViewModel = ListMainViewModel()) {
+fun ListMainScreen(viewModel: ListMainViewModel = koinViewModel()) {
 
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
