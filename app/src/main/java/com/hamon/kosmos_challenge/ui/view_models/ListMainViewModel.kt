@@ -16,14 +16,10 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
-class ListMainViewModel: ViewModel() {
+class ListMainViewModel(val getCharactersUseCase: GetCharactersUseCase): ViewModel() {
 
     private val _uiState = MutableStateFlow<MutableList<CharacterUI>>(mutableListOf())
     val uiState: StateFlow<MutableList<CharacterUI>> = _uiState.asStateFlow()
-
-    private val getCharactersUseCase: GetCharactersUseCase by lazy {
-        GetCharacterUserCaseImpl()
-    }
 
     fun getCharacters() {
         viewModelScope.launch(Dispatchers.IO) {

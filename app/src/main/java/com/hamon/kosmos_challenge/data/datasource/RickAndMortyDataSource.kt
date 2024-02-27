@@ -10,12 +10,7 @@ interface RickAndMortyDataSource {
 
 }
 
-class RickAndMortyDataSourceImpl : RickAndMortyDataSource {
-
-    // Move to DI
-    private val client by lazy {
-        API.getServices<RickAndMortyServices>()
-    }
+class RickAndMortyDataSourceImpl(val client: RickAndMortyServices ) : RickAndMortyDataSource {
 
     override suspend fun getCharacters(): List<Character> {
         return runCatching {
