@@ -11,6 +11,10 @@ composeBom = "2023.08.00"
 retrofit = "2.9.0"
 retrofit-loggin-interceptor="4.11.0"
 navigationCompose = "2.6.0"
+viewmodelCompose = "2.6.1"
+coil = "2.6.0"
+lottie = "6.3.0"
+lifecycleCompose = "2.6.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -31,6 +35,10 @@ retrofit = {group="com.squareup.retrofit2", name="retrofit", version.ref = "retr
 retrofit-interceptor = {group="com.squareup.okhttp3", name="logging-interceptor", version.ref = "retrofit-loggin-interceptor" }
 retrofit-converter = {group="com.squareup.retrofit2", name="converter-gson", version.ref = "retrofit" }
 navigation = {group="androidx.navigation", name="navigation-compose", version.ref = "navigationCompose" }
+viewmodel-compose = {group="androidx.lifecycle", name="lifecycle-viewmodel-compose", version.ref = "viewmodelCompose" }
+coil = {group="io.coil-kt", name="coil-compose", version.ref = "coil" }
+lottie = {group="com.airbnb.android", name="lottie-compose", version.ref = "lottie" }
+compose-lifecycle = {group="androidx.lifecycle", name="lifecycle-runtime-compose", version.ref = "lifecycleCompose" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
